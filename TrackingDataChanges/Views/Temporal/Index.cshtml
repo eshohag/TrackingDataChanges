@@ -1,0 +1,39 @@
+﻿@model IEnumerable<TrackingDataChanges.Models.StudentHistory>
+
+@{
+    ViewData["Title"] = "Temporal";
+}
+
+<h1>Temporal Tables Data</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PeriodStart)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PeriodEnd)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PeriodStart)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PeriodEnd)
+                </td>  
+            </tr>
+        }
+    </tbody>
+</table>

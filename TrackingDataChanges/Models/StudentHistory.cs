@@ -2,7 +2,7 @@
 {
     public class StudentHistory : Student, History
     {
-        public DateTime PeriodStart { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime PeriodEnd { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DateTime PeriodStart { get; set; }
+        public DateTime PeriodEnd { get; set; }
     }
 }

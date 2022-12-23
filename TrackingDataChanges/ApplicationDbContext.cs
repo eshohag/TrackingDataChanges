@@ -15,6 +15,8 @@ namespace TrackingDataChanges
                 .ToTable(name: "Students", studentsTable => studentsTable.IsTemporal());
         }
 
-        public DbSet<Student> Students { get; set; }
+        public DbSet<Student> Students { get; set; } = default!;
+
+        public DbSet<StudentHistory> StudentHistory { get; set; } = default!;
     }
 }
