@@ -100,6 +100,7 @@ TemporalContainedIn: Returns all rows that started being active and ended being 
 
 
 The code included in this sample is not intended to demonstrate some general guidelines and architectural patterns for web development. You can easily modify this code to fit your application architecture. <br/>
-More Details- https://learn.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver16
+More Details- https://devblogs.microsoft.com/dotnet/prime-your-flux-capacitor-sql-server-temporal-tables-in-ef-core-6-0/
+https://learn.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver16
 
 Contact eshohag@outlook.com with any additional questions or comments.
