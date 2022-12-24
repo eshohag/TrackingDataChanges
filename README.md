@@ -40,7 +40,7 @@ There are some considerations and limitations to be aware of when working with t
 More details about querying a temporal table-
 https://learn.microsoft.com/en-us/sql/relational-databases/tables/querying-data-in-a-system-versioned-temporal-table?view=sql-server-ver16
 
-
+<br/>
 
 ## ASP.NET Core Web Application to learn how to build a temporal application using temporal tables.
 
@@ -100,6 +100,6 @@ TemporalContainedIn: Returns all rows that started being active and ended being 
 
 
 The code included in this sample is not intended to demonstrate some general guidelines and architectural patterns for web development. You can easily modify this code to fit your application architecture. <br/>
-More Details- https://learn.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver16#how-do-i-query-temporal-data
+More Details- https://learn.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver16
 
 Contact eshohag@outlook.com with any additional questions or comments.
