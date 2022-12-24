@@ -92,12 +92,11 @@ EF Core supports several temporal table query operators:
 4.	TemporalBetween
 5.	TemporalContainedIn
 
-TemporalAll: Returns all rows in the historical data. This is typically many rows from the history table for a given primary key.
-TemporalAsOf: Returns rows that were active (current) at the given UTC time. This is a single row from the history table for a given primary key.
-
-TemporalFromTo: Returns all rows that were active between two given UTC times. This may be many rows from the history table for a given primary key.
-TemporalBetween: The same as TemporalFromTo, except that rows are included that became active on the upper boundary.
-TemporalContainedIn: Returns all rows that started being active and ended being active between two given UTC times. This may be many rows from the history table for a given primary key.
+TemporalAll: Returns all rows in the historical data. This is typically many rows from the history table for a given primary key. <br/>
+TemporalAsOf: Returns rows that were active (current) at the given UTC time. This is a single row from the history table for a given primary key. <br/>
+TemporalFromTo: Returns all rows that were active between two given UTC times. This may be many rows from the history table for a given primary key. <br/>
+TemporalBetween: The same as TemporalFromTo, except that rows are included that became active on the upper boundary. <br/>
+TemporalContainedIn: Returns all rows that started being active and ended being active between two given UTC times. This may be many rows from the history table for a given primary key. <br/>
 
 
 The code included in this sample is not intended to demonstrate some general guidelines and architectural patterns for web development. You can easily modify this code to fit your application architecture. <br/>
