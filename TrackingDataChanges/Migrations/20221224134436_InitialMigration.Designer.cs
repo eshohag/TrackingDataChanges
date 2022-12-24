@@ -12,7 +12,7 @@ using TrackingDataChanges;
 namespace TrackingDataChanges.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221223131149_InitialMigration")]
+    [Migration("20221224134436_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -20,7 +20,7 @@ namespace TrackingDataChanges.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.0")
+                .HasAnnotation("ProductVersion", "7.0.1")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -30,6 +30,10 @@ namespace TrackingDataChanges.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -49,7 +53,11 @@ namespace TrackingDataChanges.Migrations
 
                     b.ToTable("Students", (string)null);
 
-                    b.ToTable(tb => tb.IsTemporal(ttb =>
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Student");
+
+                    b
+                        .UseTphMappingStrategy()
+                        .ToTable(tb => tb.IsTemporal(ttb =>
                             {
                                 ttb.UseHistoryTable("StudentsHistory");
                                 ttb
@@ -59,6 +67,13 @@ namespace TrackingDataChanges.Migrations
                                     .HasPeriodEnd("PeriodEnd")
                                     .HasColumnName("PeriodEnd");
                             }));
+                });
+
+            modelBuilder.Entity("TrackingDataChanges.Models.StudentHistory", b =>
+                {
+                    b.HasBaseType("TrackingDataChanges.Models.Student");
+
+                    b.HasDiscriminator().HasValue("StudentHistory");
                 });
 #pragma warning restore 612, 618
         }
