@@ -42,14 +42,13 @@ https://learn.microsoft.com/en-us/sql/relational-databases/tables/querying-data-
 
 <br/>
 
-## ASP.NET Core Web Application to learn how to build a temporal application using temporal tables.
-
 ### Software Prerequisites:
 1.	SQL Server 2016 (or higher)
 2.	ASP.NET Core 1.0 SDK (or higher). Optional: Visual Studio 2015 Update 3 (or higher) or Visual Studio Code Editor.
 
+## Step-by-step Implementation
 
-### 1st Steps (ASP.NET Project Creation)
+### Step 1. ASP.NET Project Creation
 Create an ASP.NET project of your convenience with Entity-Framework Core 6 or higher.
  
 NuGet Package Manager Console:<br/>
@@ -69,21 +68,21 @@ NuGet Package Manager Console:<br/>
   Install-Package Microsoft.EntityFrameworkCore.Tools -Version 7.0.1
 ``
 
-### 2nd Steps (Connection String)
+### Step 2. Connection tring 
 Configure your connections string & connect with your MSSQL Server DB
  
  
 
-### 3rd Steps (Models Creations)
+### Step 3. Models Creations
 Define a model according to your temporal table.
  
-### 4th Steps (Configuration temporal tables)
+### Step 4. Configuration Temporal Tables
 Configuration with temporal table specified in OnModelCreating
  
-### 5th Steps (Database Creation)
+### Step 5. Database Creation
 Add a migration to create a database.
 
-### 6th Steps (Fetching temporal table data)
+### Step 6. Fetching Temporal Table Data
 
 EF Core supports several temporal table query operators:
 1.	TemporalAll
@@ -100,7 +99,11 @@ TemporalContainedIn: Returns all rows that started being active and ended being 
 
 
 The code included in this sample is not intended to demonstrate some general guidelines and architectural patterns for web development. You can easily modify this code to fit your application architecture. <br/>
-More Details- https://devblogs.microsoft.com/dotnet/prime-your-flux-capacitor-sql-server-temporal-tables-in-ef-core-6-0/
+
+Reference
+https://devblogs.microsoft.com/dotnet/prime-your-flux-capacitor-sql-server-temporal-tables-in-ef-core-6-0/
 https://learn.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver16
 
-Contact eshohag@outlook.com with any additional questions or comments.
+Conclusion
+In this article, I have explained how we can implement temporal tables with Entity-Framework very easily in MS SQL Server. For your better understanding, I have shared the source code link of the project. I have used a simple MVC project in ASP.NET Core for your practice and understanding.
+I hope you enjoyed this article, see you soon in the next article, till then take care and be happy learning…
