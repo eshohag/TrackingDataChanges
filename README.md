@@ -100,10 +100,10 @@ TemporalContainedIn: Returns all rows that started being active and ended being 
 
 The code included in this sample is not intended to demonstrate some general guidelines and architectural patterns for web development. You can easily modify this code to fit your application architecture. <br/>
 
-Reference
-https://devblogs.microsoft.com/dotnet/prime-your-flux-capacitor-sql-server-temporal-tables-in-ef-core-6-0/
+## Reference
+https://devblogs.microsoft.com/dotnet/prime-your-flux-capacitor-sql-server-temporal-tables-in-ef-core-6-0/ </br>
 https://learn.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver16
 
-Conclusion
-In this article, I have explained how we can implement temporal tables with Entity-Framework very easily in MS SQL Server. For your better understanding, I have shared the source code link of the project. I have used a simple MVC project in ASP.NET Core for your practice and understanding.
+## Conclusion
+In this article, I have explained how we can implement temporal tables with Entity-Framework very easily in MS SQL Server. For your better understanding, I have shared the source code link of the project. I have used a simple MVC project in ASP.NET Core for your practice and understanding. </br>
 I hope you enjoyed this article, see you soon in the next article, till then take care and be happy learning…
